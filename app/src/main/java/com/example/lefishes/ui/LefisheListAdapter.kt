@@ -28,7 +28,7 @@ class LefisheListAdapter(val clickListener: LefisheListener) :
         }
 
         override fun areContentsTheSame(oldItem: Lefishe, newItem: Lefishe): Boolean {
-            return oldItem.description == newItem.description
+            return oldItem.description == newItem.description && oldItem.photo == newItem.photo
         }
 
     }

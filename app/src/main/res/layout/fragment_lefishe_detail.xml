@@ -8,11 +8,27 @@
         <variable
             name="viewModel"
             type="com.example.lefishes.ui.LefisheViewModel" />
+
+        <variable
+            name="photo"
+            type="com.example.lefishes.network.Lefishe" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:padding="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:imageUrl="@{viewModel.lefishe.photo.src}"
+            tools:src="@tools:sample/backgrounds/scenic"/>
 
         <TextView
             android:id="@+id/name"
@@ -21,7 +37,7 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo"
             tools:text="@{viewModel.lefishe.name}"/>
 
         <View

@@ -43,7 +43,7 @@ data class Lefishe (
     val speciesAliases: String? = "No Data",
 
     @Json(name = "Species Illustration Photo")
-    val speciesIllustrationPhoto: SpeciesIllustrationPhoto?,
+    val photo: SpeciesIllustrationPhoto?,
 
     @Json(name = "Species Name")
     val name: String? = "No Data",
@@ -172,7 +172,7 @@ data class Lefishe (
 //)
 
 data class SpeciesIllustrationPhoto (
-    val src: String? = "https://www.fishwatch.gov/sites/default/files/Hake_White_NB_W_0.png",
+    val src: String,
     val alt: String? = "No Data",
     val title: String? = "No Data"
 )
