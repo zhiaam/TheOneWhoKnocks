@@ -7,11 +7,11 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.lefishes.ui.LefisheViewModel" />
+            type="com.example.whites.ui.WhiteViewModel" />
 
         <variable
             name="photo"
-            type="com.example.lefishes.network.Lefishe" />
+            type="com.example.whites.network.White" />
     </data>
     <ScrollView
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
                 android:padding="2dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:imageUrl="@{viewModel.lefishe.photo.src}"
+                app:imageUrl="@{viewModel.white.photo}"
                 tools:src="@tools:sample/backgrounds/scenic"/>
 
             <TextView
@@ -40,7 +40,7 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/photo"
-                tools:text="@{viewModel.lefishe.name}"/>
+                tools:text="@{viewModel.white.name}"/>
 
             <View
                 android:layout_width="match_parent"
@@ -59,7 +59,7 @@
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/name"
-                tools:text="@{viewModel.lefishe.description}"/>
+                tools:text="@{viewModel.white.occupations}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

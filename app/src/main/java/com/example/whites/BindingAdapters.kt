@@ -1,4 +1,4 @@
-package com.example.lefishes
+package com.example.whites
 
 import android.view.View
 import android.widget.ImageView
@@ -6,13 +6,13 @@ import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
-import com.example.lefishes.network.Lefishe
-import com.example.lefishes.ui.LefisheApiStatus
-import com.example.lefishes.ui.LefisheListAdapter
+import com.example.whites.network.White
+import com.example.whites.ui.WhiteApiStatus
+import com.example.whites.ui.WhiteListAdapter
 
 @BindingAdapter("listData")
-fun bindRecyclerView(recyclerView: RecyclerView, data: List<Lefishe>?) {
-    val adapter = recyclerView.adapter as LefisheListAdapter
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<White>?) {
+    val adapter = recyclerView.adapter as WhiteListAdapter
     adapter.submitList(data)
 }
 
@@ -29,16 +29,16 @@ fun bindImage(imgView: ImageView, imgUrl: String?) {
 
 
 @BindingAdapter("apiStatus")
-fun bindStatus(statusImageView: ImageView, status: LefisheApiStatus?) {
+fun bindStatus(statusImageView: ImageView, status: WhiteApiStatus?) {
     when(status) {
-        LefisheApiStatus.LOADING -> {
+        WhiteApiStatus.LOADING -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.loading_animation)
         }
-        LefisheApiStatus.DONE -> {
+        WhiteApiStatus.DONE -> {
             statusImageView.visibility = View.GONE
         }
-        LefisheApiStatus.ERROR -> {
+        WhiteApiStatus.ERROR -> {
             statusImageView.visibility = View.VISIBLE
             statusImageView.setImageResource(R.drawable.ic_connection_error)
         }

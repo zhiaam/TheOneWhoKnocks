@@ -4,11 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
-            name="lefishe"
-            type="com.example.lefishes.network.Lefishe" />
+            name="white"
+            type="com.example.whites.network.White" />
         <variable
             name="clickListener"
-            type="com.example.lefishes.ui.LefisheListener" />
+            type="com.example.whites.ui.WhiteListener" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
@@ -16,12 +16,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
-        android:onClick="@{() -> clickListener.onClick(lefishe)}"
+        android:onClick="@{() -> clickListener.onClick(white)}"
         app:cardElevation="4dp"
         app:cardCornerRadius="4dp">
 
         <TextView
-            android:id="@+id/lefishe_name"
+            android:id="@+id/white_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -29,10 +29,10 @@
             android:padding="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textSize="18sp"
-            android:text="@{lefishe.name}"
+            android:text="@{white.name}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Fishe" />
+            tools:text="White" />
 
     </com.google.android.material.card.MaterialCardView>
 

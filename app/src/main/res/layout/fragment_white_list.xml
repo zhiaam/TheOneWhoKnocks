@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.lefishes.ui.LefisheViewModel" />
+            type="com.example.whites.ui.WhiteViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -22,7 +22,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:listData="@{viewModel.lefishes}"
+            app:listData="@{viewModel.whites}"
             tools:listitem="@layout/list_view_item" />
 
         <ImageView

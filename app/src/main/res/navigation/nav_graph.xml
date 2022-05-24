@@ -2,18 +2,26 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/lefisheListFragment">
+    app:startDestination="@id/whiteFrontFragment">
 
     <fragment
-        android:id="@+id/lefisheListFragment"
-        android:name="com.example.lefishes.ui.LefisheListFragment"
-        android:label="LefisheListFragment" >
+        android:id="@+id/whiteListFragment"
+        android:name="com.example.whites.ui.WhiteListFragment"
+        android:label="WhiteListFragment">
         <action
-            android:id="@+id/action_lefisheListFragment_to_lefisheDetailFragment"
-            app:destination="@id/lefisheDetailFragment" />
+            android:id="@+id/action_whiteListFragment_to_whiteDetailFragment"
+            app:destination="@id/whiteDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/lefisheDetailFragment"
-        android:name="com.example.lefishes.ui.LefisheDetailFragment"
-        android:label="LefisheDetailFragment" />
+        android:id="@+id/whiteDetailFragment"
+        android:name="com.example.whites.ui.WhiteDetailFragment"
+        android:label="WhiteDetailFragment" />
+    <fragment
+        android:id="@+id/whiteFrontFragment"
+        android:name="com.example.whites.ui.WhiteFrontFragment"
+        android:label="WhiteFrontFragment" >
+        <action
+            android:id="@+id/action_whiteFrontFragment_to_whiteListFragment"
+            app:destination="@id/whiteListFragment" />
+    </fragment>
 </navigation>
